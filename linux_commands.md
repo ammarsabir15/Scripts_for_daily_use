@@ -1,5 +1,5 @@
 # command for removing newlines with commas and adding inverted commas to the values at the same time
-sed  's/^\|$/"/g' chk1.txt | paste -d,-s |tr '\n' ',' > myfile
+sed -n 's/.*/"&"/; $! s/$/,/; 1 h; 1 ! H; $ { x; s/\n/ /g; p; }' foo.txt
 
 # sed command for separating space with a comma
 sed "s/\s/,/g" original_file.txt > edited_file.txt
@@ -89,19 +89,19 @@ tar -C /path_to_directory -zxvf yourfile.tar.gz
 # Command for indexing reference genome using bwa
 bwa index hg19.fasta
 
-# Command for
+# Command for aligning a genome to reference genome
  bwa aln hg19.fasta Xpress88.fastq>alnX88.sai
 
-# Command for 
+# Command for converting .sai file to sam file
 bwa samse hg19.fasta  alnX88.sai Xpress88.fastq > data88.aln.sam 
 
-# Command for
+# Command for aligning genomes to the reference
 bwa mem ref.fa {}_1.fastq {}_2.fastq '>' '{}'.sam
 
-# Command for
+# Command for indexing genome
  samtools faidx hg19.fasta
 
-# Command for
+# Command for converting sam to bam 
 samtools import hg19.fasta.fai data88.aln.sam data88.bam
 
 # Command for sorting a BAM file
@@ -119,10 +119,8 @@ samtools view -S -b sample.sam > sample.bam
 # Unzip .gz files in parallel
 parallel --gnu gunzip ::: *.gz 
 
-
+# Command for parallelizing alignment operations
 find   -name "*.fastq" | grep -v _2.fastq | sed 's/_1.fastq//' | parallel bwa mem -t 30 ref.fa {}_1.fastq {}_2.fastq '>' '{}'.sam |  samtools view -Sb '{}'.sorted.sam '>' '{}'.bam | samtools index '{}'.bam 
-
-
 
 # Count occurence of values in column 1 if file is sorted
 <infile cut -d' ' -f1 | uniq -c
@@ -141,14 +139,13 @@ cut -d' ' -f2 filename.txt
 find . -size 0 -delete
 
 # script for removing rows having specific value
-for i in *.txt; do
+for i in *.txt; 
+do
     awk '$4 != "FAIL"' $i > $i.out
 done 
 
-
 # count occurence of a pattern in multiple files
 find *.txt -printf 'echo "$(grep -o "pattern" %p | wc -l) %p";' | sh
-
 
 # Put a word (echo in this case) before each line. for adding a special character like backslach you need a backslash before it
 cat res1.txt | perl -ne 'print "\\publication{" . $_' > res2.txt
@@ -166,13 +163,11 @@ comm -12 file1 file2 # this is more accurate
 # Command for extracting only publications tags/names from latex .bib file
 sed -n '/@article{/,/,/p'  publications.bib | grep -v "title" | cut -d{ -f2|sed 's/,//g
 
-
 # Command for removing citations from the text files
 python pycode input_file |tr -d '(),' output_file
 
 # Error copying data to usb
 killall nautilus
-
 
 # Removing line numbers before a code block
 sed 's/ *[0-9]*.//' script > script-no-line-numbers
