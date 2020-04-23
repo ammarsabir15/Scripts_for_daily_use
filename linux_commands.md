@@ -1,3 +1,6 @@
+# Command for finding duplicates in a file
+grep -wo '[[:alnum:]]\+' infile | sort | uniq -cd
+
 # command for removing newlines with commas and adding inverted commas to the values at the same time
 sed -n 's/.*/"&"/; $! s/$/,/; 1 h; 1 ! H; $ { x; s/\n/ /g; p; }' foo.txt
 
