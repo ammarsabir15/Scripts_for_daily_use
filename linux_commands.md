@@ -175,3 +175,13 @@ killall nautilus
 # Removing line numbers before a code block
 sed 's/ *[0-9]*.//' script > script-no-line-numbers
 
+# Command to check the available packages
+apt-cache search openblas # openblas/name of package
+
+Check if a library is installed or not 
+find /lib* /usr/lib* -name '*open*' # put package instead of open
+
+Check if a library is installed
+dpkg -L libopenblas-dev # library name at the end
+
+
