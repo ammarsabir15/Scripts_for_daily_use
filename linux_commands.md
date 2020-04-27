@@ -190,4 +190,7 @@ find /lib* /usr/lib* -name '*open*' # put package instead of open
 Check if a library is installed
 dpkg -L libopenblas-dev # library name at the end
 
+Command for merging all pdf documents in the directory
+qpdf --empty --pages *.pdf -- out.pdf
+
 
