@@ -125,6 +125,12 @@ parallel --gnu gunzip ::: *.gz
 # Command for parallelizing alignment operations
 find   -name "*.fastq" | grep -v _2.fastq | sed 's/_1.fastq//' | parallel bwa mem -t 30 ref.fa {}_1.fastq {}_2.fastq '>' '{}'.sam |  samtools view -Sb '{}'.sorted.sam '>' '{}'.bam | samtools index '{}'.bam 
 
+# Command for printing words ending with 'neg' using awk
+awk '/neg$/{print}' file.txt
+
+# Command for printing first column of a file using awk
+awk '{ print $1 }' sig2.txt
+
 # Count occurence of values in column 1 if file is sorted
 <infile cut -d' ' -f1 | uniq -c
 
