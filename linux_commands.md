@@ -1,3 +1,6 @@
+# Pasting the output of a command in termbin 
+echo just testing!  | nc termbin.com 9999
+
 # Command for finding duplicates in a file
 grep -wo '[[:alnum:]]\+' infile | sort | uniq -cd
 
@@ -184,13 +187,13 @@ sed 's/ *[0-9]*.//' script > script-no-line-numbers
 # Command to check the available packages
 apt-cache search openblas # openblas/name of package
 
-Check if a library is installed or not 
+# Check if a library is installed or not 
 find /lib* /usr/lib* -name '*open*' # put package instead of open
 
-Check if a library is installed
+# Check if a library is installed
 dpkg -L libopenblas-dev # library name at the end
 
-Command for merging all pdf documents in the directory
+# Command for merging all pdf documents in the directory
 qpdf --empty --pages *.pdf -- out.pdf
 
 
