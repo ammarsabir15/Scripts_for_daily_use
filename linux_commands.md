@@ -1,3 +1,6 @@
+# Printing a column from a file based on condition
+awk '{ if ($2 < 0.05) print $1 }' file_name # Where $1 and $2 are column names
+
 # Pasting the output of a command in termbin 
 echo just testing!  | nc termbin.com 9999
 
