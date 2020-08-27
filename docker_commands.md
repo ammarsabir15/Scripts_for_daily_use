@@ -6,6 +6,9 @@
 
 # To list the running docker containers
     docker ps
+    
+# To list all the docker containers
+    docker ps -a
 
 # Saving an image in a tar.gz archive:
     docker save NameOfDockerImage > /mnt/NAS7/.../NameOfDockerImage.tar.gz
