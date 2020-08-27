@@ -1,66 +1,66 @@
 # Join vectors containing duplicate values R
 
 
-list1 <- c(1, 2, 3, 4, 5, 6, 7)
+    list1 <- c(1, 2, 3, 4, 5, 6, 7)
 
 
-list2 <- c(3, 6, 7, 8, 9, 10, 11)
+    list2 <- c(3, 6, 7, 8, 9, 10, 11)
 
 
-union(list1, list2)
+    union(list1, list2)
 
 
-[1]  1  2  3  4  5  6  7  8  9 10 11
+    [1]  1  2  3  4  5  6  7  8  9 10 11
 
 
 
 # Find common elements
-varss <- c(1:8)
+    varss <- c(1:8)
 
-varsg <- c(2:9)
+    varsg <- c(2:9)
  
 # Elements of first variable (varss) which are not present in the second variable (varsg)
-both <- varss %in% varsg
+    both <- varss %in% varsg
 
-both
+    both
 
-[1] FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+    [1] FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
  
  
 # Elements of second variable (varsg) which are not present in the first variable (varss)
-both <- varsg %in% varss
+    both <- varsg %in% varss
 
-both
+    both
 
-[1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE
+    [1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE
  
 # Intersection of both variables
 
-common <- intersect(varss,varsg)
+    common <- intersect(varss,varsg)
 
-common
+    common
 
-[1] 2 3 4 5 6 7 8
+    [1] 2 3 4 5 6 7 8
  
  
 # What is different in varss
-difs <- setdiff(varss,varsg)
+    difs <- setdiff(varss,varsg)
 
-difs
+    difs
 
-[1] 1
+    [1] 1
  
  
 # What is different in varsg
-difg <- setdiff(varsg,varss)
+    difg <- setdiff(varsg,varss)
 
-difg
+    difg
 
-[1] 9
+    [1] 9
 
 
 # Ordering dataframes
-head(mtcars)
+    head(mtcars)
 
                       mpg cyl disp  hp drat    wt  qsec vs am gear carb
 
@@ -77,11 +77,11 @@ head(mtcars)
     Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 
 # sort by mpg
-newdata <- mtcars[order(mpg),]
+    newdata <- mtcars[order(mpg),]
  
-head(newdata)
+    head(newdata)
                   
-                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+                        mpg cyl disp  hp drat    wt  qsec vs am gear carb
 
     Cadillac Fleetwood  10.4   8  472 205 2.93 5.250 17.98  0  0    3    4
 
@@ -96,9 +96,9 @@ head(newdata)
     Maserati Bora       15.0   8  301 335 3.54 3.570 14.60  0  1    5    8
 
 # Sort by mpg (ascending) and cyl (descending)
-newdata <- mtcars[order(mpg, -cyl),]
+    newdata <- mtcars[order(mpg, -cyl),]
  
-head(newdata)
+    head(newdata)
 
                         mpg cyl disp  hp drat    wt  qsec vs am gear carb
 
