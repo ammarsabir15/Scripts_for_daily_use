@@ -61,7 +61,8 @@ difg
 
 # Ordering dataframes
 head(mtcars)
-                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+
+                  mpg cyl disp  hp drat    wt  qsec vs am gear carb
 
 Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
 
@@ -79,7 +80,8 @@ Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 newdata <- mtcars[order(mpg),]
  
 head(newdata)
-                     mpg cyl disp  hp drat    wt  qsec vs am gear carb
+                  
+                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
 
 Cadillac Fleetwood  10.4   8  472 205 2.93 5.250 17.98  0  0    3    4
 
@@ -97,6 +99,7 @@ Maserati Bora       15.0   8  301 335 3.54 3.570 14.60  0  1    5    8
 newdata <- mtcars[order(mpg, -cyl),]
  
 head(newdata)
+
                      mpg cyl disp  hp drat    wt  qsec vs am gear carb
 
 Cadillac Fleetwood  10.4   8  472 205 2.93 5.250 17.98  0  0    3    4
