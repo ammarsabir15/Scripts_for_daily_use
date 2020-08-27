@@ -113,6 +113,15 @@
     Chrysler Imperial   14.7   8  440 230 3.23 5.345 17.42  0  0    3    4
 
     Maserati Bora       15.0   8  301 335 3.54 3.570 14.60  0  1    5    8
+    
+ # Replace or remove strings in R
+    group <- c("12357e", "12575e", "197e18", "e18947")
+    group
+    [1] "12357e" "12575e" "197e18" "e18947"
+
+    gsub("e", "", group)
+    [1] "12357" "12575" "19718" "18947"
+    
 
 
 
