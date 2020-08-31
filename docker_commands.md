@@ -13,8 +13,13 @@
 # To list all the docker containers
     docker ps -a
 
-# To kill a stopped docker container
+# To remove a stopped docker container
     docker rm <container-name>
+
+# To remove all stopped containers
+    sudo docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rm
+
+
 
 # Saving an image in a tar.gz archive:
     docker save NameOfDockerImage > /mnt/NAS7/.../NameOfDockerImage.tar.gz
@@ -22,3 +27,6 @@
 
 # Loading a docker image
     docker load -i /mnt/NAS7/.../NameOfDockerImage.tar.gz
+    
+# Remove all dangling docker images
+    docker images -q --filter dangling=true | xargs docker rmi
