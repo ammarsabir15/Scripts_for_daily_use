@@ -3,12 +3,18 @@
 
 # To list the build docker images
     docker images
-
+    
+# To remove a docker image    
+    docker rmi <image-name>
+    
 # To list the running docker containers
     docker ps
     
 # To list all the docker containers
     docker ps -a
+
+# To kill a stopped docker container
+    docker rm <container-name>
 
 # Saving an image in a tar.gz archive:
     docker save NameOfDockerImage > /mnt/NAS7/.../NameOfDockerImage.tar.gz
