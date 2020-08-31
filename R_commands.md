@@ -122,6 +122,12 @@
     gsub("e", "", group)
     [1] "12357" "12575" "19718" "18947"
     
+    
+  # Other commands to add
+    table
+    table.prop
+    
+    
 
 
 
