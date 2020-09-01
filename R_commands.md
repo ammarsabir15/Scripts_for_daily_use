@@ -194,7 +194,19 @@
 	6         F              NA               6
 
 # Code for reading multiple excel sheets at once
+     library(readxl)
+     lists_of_genes <- readxl::excel_sheets("excel_sheets.xlsx")
 
+	for(i in 1:length(lists_of_genes)){
+
+	  assign(lists_of_genes[i],unlist(read_excel("2020_08_27_gene_list_to_run_in_EnrichR.xlsx", sheet = lists_of_genes[i],col_names = FALSE,col_types = "text"),use.names=FALSE))
+	  }
+
+# Code to extract specific columns from a dataframe
+    dataframe[,c(vector of column names)]
+    
+# Code to extract specific rows from a dataframe
+    dataframe[c(vector of row names),]
 
     
     
