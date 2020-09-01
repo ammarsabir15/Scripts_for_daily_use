@@ -133,6 +133,71 @@
     table.prop
     
     
+ # Code for adding the other values of dataframes into matching dataframes and putting NAs
+ 
+ 	df1 = data.frame(initialValues = 1:6)
+	rownames(df1) = LETTERS[1:6]
+	df1
+	  initialValues
+	A             1
+	B             2
+	C             3
+	D             4
+	E             5
+	F             6
+
+
+
+	df2 = data.frame(otherValues = 11:13)
+	rownames(df2) = LETTERS[1:3]
+	df2
+	  otherValues
+	A          11
+	B          12
+	C          13
+
+
+
+	df3 = data.frame(otherValuesAgain = 21:23)
+	rownames(df3) = LETTERS[4:6]
+	df3
+	  otherValuesAgain
+	D               21
+	E               22
+	F               23
+
+
+
+	df2Result = df1[match( rownames(df2), rownames(df1)), 1, drop = FALSE]
+	df2Result
+	  initialValues
+	A             1
+	B             2
+	C             3
+
+
+	df3Result = df1[match( rownames(df3), rownames(df1)), 1, drop = FALSE]
+	df3Result
+	  initialValues
+	D             4
+	E             5
+	F             6
+
+
+	result
+	  Row.names initialValues.x initialValues.y
+	1         A               1              NA
+	2         B               2              NA
+	3         C               3              NA
+	4         D              NA               4
+	5         E              NA               5
+	6         F              NA               6
+
+
+
+
+    
+    
     
     
     
