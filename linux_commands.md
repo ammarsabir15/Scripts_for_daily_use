@@ -200,5 +200,11 @@ or
 
 # Command for merging all pdf documents in the directory
     qpdf --empty --pages *.pdf -- out.pdf
+    
+    
+# Renaming the files in a folder
+    for file in <file_name><pattern>; do
+        mv "$file" "${file/	/}"
+    done
 
 
