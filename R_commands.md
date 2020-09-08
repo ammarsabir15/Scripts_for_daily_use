@@ -207,6 +207,10 @@
     
 # Code to extract specific rows from a dataframe
     dataframe[c(vector of row names),]
+    
+    
+# Code for getting the normalized gene expression matrix from Seurat object
+    <Seurat-object-name>@assays$RNA@data
 
     
     
