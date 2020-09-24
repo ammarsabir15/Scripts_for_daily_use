@@ -206,5 +206,24 @@ or
     for file in <file_name><pattern>; do
         mv "$file" "${file/	/}"
     done
+    
+    
+# Command for removing duplicates in from a file
+    # Assuming that the words are one per line, and the file is already sorted:
+
+    uniq filename
+
+    # If the file's not sorted:
+
+    sort filename | uniq
+
+    # If they're not one per line, and you don't mind them being one per line:
+
+    tr -s [:space:] \\n < filename | sort | uniq
+
+    # That doesn't remove punctuation, though, so maybe you want:
+
+    tr -s [:space:][:punct:] \\n < filename | sort | uniq
+
 
 
