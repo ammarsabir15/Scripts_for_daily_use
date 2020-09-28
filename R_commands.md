@@ -217,6 +217,15 @@
     tiff("test.tiff", units="in", width=20, height=11, res=300)
     plot(x,y)
     dev.off()
+    
+    
+ # Convert logical vector (TRUE/FALSE) to numerical vectors
+ 
+    k <- as.logical(c("TRUE","FALSE"))
+    k
+    [1]  TRUE FALSE
+    as.numeric(k)
+    1 0
 
     
     
