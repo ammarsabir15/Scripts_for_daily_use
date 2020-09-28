@@ -226,6 +226,13 @@
     [1]  TRUE FALSE
     as.numeric(k)
     1 0
+    
+ # Check for matches between two vectors of unequal length
+    list_1 <- c("A","T","G","C") 
+    list_2 <- c("A","T")
+    as.numeric(list_1 %in% list_2)
+    1 1 0 0
+
 
     
     
