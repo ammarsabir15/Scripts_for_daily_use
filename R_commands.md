@@ -211,6 +211,12 @@
     
 # Code for getting the normalized gene expression matrix from Seurat object
     <Seurat-object-name>@assays$RNA@data
+    
+   
+# Saving an image to a tiff format file
+    tiff("test.tiff", units="in", width=20, height=11, res=300)
+    plot(x,y)
+    dev.off()
 
     
     
