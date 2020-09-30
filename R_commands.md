@@ -125,6 +125,7 @@
  # To use python in Rstudio 
     library(reticulate)
     repl_python()
+    exit # to exit python
  
  
  
