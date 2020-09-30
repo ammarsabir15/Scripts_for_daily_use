@@ -124,7 +124,7 @@
     
  # To use python in Rstudio 
     library(reticulate)
-    repl_python
+    repl_python()
  
  
  
