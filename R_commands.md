@@ -234,6 +234,8 @@
     as.numeric(list_1 %in% list_2)
     1 1 0 0
 
+ # To unload an R package
+    detach_package(package_name)
 
     
     
