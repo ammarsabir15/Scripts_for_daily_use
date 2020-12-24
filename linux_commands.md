@@ -224,6 +224,10 @@ or
     # That doesn't remove punctuation, though, so maybe you want:
 
     tr -s [:space:][:punct:] \\n < filename | sort | uniq
+    
+ # Compressing the pdf
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+    # you can also use other options like ebook, prepress, printer and default 
 
 
 
