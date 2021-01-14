@@ -236,7 +236,28 @@
 
  # To unload an R package
     detach_package(package_name)
+    
+ # To remove a column from a dataframe
+    > head(data)
+    chr       genome region
+    1 chr1 hg19_refGene    CDS
+    2 chr1 hg19_refGene   exon
+    3 chr1 hg19_refGene    CDS
+    4 chr1 hg19_refGene   exon
+    5 chr1 hg19_refGene    CDS
+    6 chr1 hg19_refGene   exon
 
+You can set it to NULL.
+
+    > Data$genome <- NULL
+    > head(Data)
+    chr region
+    1 chr1    CDS
+    2 chr1   exon
+    3 chr1    CDS
+    4 chr1   exon
+    5 chr1    CDS
+    6 chr1   exon
     
     
     
