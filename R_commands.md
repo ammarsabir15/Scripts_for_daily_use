@@ -114,6 +114,12 @@
 
     Maserati Bora       15.0   8  301 335 3.54 3.570 14.60  0  1    5    8
     
+ # For sorting a vector 
+    a_vec <- c(1,6,2,7,4)
+    sort(a_vec)
+    [1] 1 2 4 6 7
+ 
+ 
  # Replace or remove strings in R
     group <- c("12357e", "12575e", "197e18", "e18947")
     group
@@ -258,6 +264,48 @@ You can set it to NULL.
     4 chr1   exon
     5 chr1    CDS
     6 chr1   exon
+    
+    
+# For plotting all columns of a dataframe
+    require(ggplot2)
+    require(reshape2)
+    df <- data.frame(time = 1:10,
+                 a = cumsum(rnorm(10)),
+                 b = cumsum(rnorm(10)),
+                 c = cumsum(rnorm(10)))
+    df <- melt(df ,  id.vars = 'time', variable.name = 'series')
+
+    # plot on same grid, each series colored differently -- 
+    # good if the series have same scale
+    ggplot(df, aes(time,value)) + geom_line(aes(colour = series))
+
+    # or plot on different plots
+    ggplot(df, aes(time,value)) + geom_line() + facet_grid(series ~ .)
+    
+# For calculating moving medians of a dataframe 
+    cell_names_gene_exp_df <- row.names(model_genes_expression_df_ord)
+
+
+    df_moving_med = NULL
+    n=1
+    k=50
+    for(i in 1:(length(cell_names_gene_exp_df)/25))
+    {
+     #print(cell_names_gene_exp_df[n:k])
+     #print(model_genes_expression_df_ord[c(cell_names_gene_exp_df[n:k]),])
+     df2 <- model_genes_expression_df_ord[c(cell_names_gene_exp_df[n:k]),]
+     df2 <- df2[complete.cases(df2),]
+     #print(plot.ts(df2))
+     #print(df2)
+     #print(sapply(df2,median))
+     #print(apply(df2,2,function(x){median(x[x>0])}))
+     name_of_the_row = paste0("t",i,sep="")
+     df_moving_med  = rbind(df_moving_med,t(data.frame(apply(df2,2,function(x){median(x[x>0])}))))
+     n=k-25
+     k=k+25
+     }
+
+    df_moving_med <- data.frame(df_moving_med)
     
     
     
