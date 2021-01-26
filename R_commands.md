@@ -307,6 +307,9 @@ You can set it to NULL.
 
     df_moving_med <- data.frame(df_moving_med)
     
+   # Replacing NA's with zeros
+    data[is.na(data)] <- 0 # Where data is the name of dataframe
+    
     
     
     
