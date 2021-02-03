@@ -30,3 +30,7 @@
     
 # Remove all dangling docker images
     docker images -q --filter dangling=true | xargs docker rmi
+    
+# For building a docker image
+    docker build -t cheemaa/tradeseq .
+    
