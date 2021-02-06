@@ -311,6 +311,11 @@ You can set it to NULL.
     data[is.na(data)] <- 0 # Where data is the name of dataframe
     
     
+   # Checking Package Version in R
+    > package.version("monocle3")
+    [1] "0.2.2"
+    
+    
     
     
     
