@@ -329,6 +329,10 @@ You can set it to NULL.
     # Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1       3
     # Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2       4
     # Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1       3
+    
+  # Split a dataframe into lists of equal parts based on rows
+    split(data_frame, sample(1:N, nrow(data_frame), replace=T)) # where N is the number of parts into which dataframe is splitted 
+  
 
     
     
