@@ -233,6 +233,9 @@ or
     
  # For checking the usage of resources by the system in real time
     top
+    
+ # Compiling Rmarkdown from the linux command line
+    Rscript -e "rmarkdown::render('filename')"
 
 
 
