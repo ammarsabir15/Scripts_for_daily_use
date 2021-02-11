@@ -1,7 +1,8 @@
 # Printing a column from a file based on condition
     awk '{ if ($2 < 0.05) print $1 }' file_name # Where $1 and $2 are column names
-    awk '{ if ($2 <= 80 && $3 >= 90)  print $1 }' file_name
-    
+    awk '{ if ($2 <= 80 && $3 >= 90)  print $1 }' file_name # for multiple conditions
+    awk '{ if ($6 <= 0.05 && $3 >= 0.405)  print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6 }' file_name # for printing multiple columns with tabs in between 
+
 # Pasting the output of a command in termbin 
     echo just testing!  | nc termbin.com 9999
 
