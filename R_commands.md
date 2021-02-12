@@ -265,6 +265,9 @@ You can set it to NULL.
     5 chr1    CDS
     6 chr1   exon
     
+    # Or you can use the subset function as given below,
+    df <- subset (df, select = -x) # where x is column name
+    
     
 # For plotting all columns of a dataframe
     require(ggplot2)
