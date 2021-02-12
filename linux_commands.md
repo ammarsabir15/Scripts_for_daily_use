@@ -233,7 +233,7 @@ or
     
  # For checking the usage of resources by the system in real time
     top
-    
+    htop # to get a colorful look at the resources usage by the system
  # Compiling Rmarkdown from the linux command line
     Rscript -e "rmarkdown::render('filename')"
 
