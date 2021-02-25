@@ -335,6 +335,11 @@ You can set it to NULL.
     
   # Split a dataframe into lists of equal parts based on rows
     split(data_frame, sample(1:N, nrow(data_frame), replace=T)) # where N is the number of parts into which dataframe is splitted 
+    
+    
+
+  # Get the name of colors R
+    scales::hue_pal()(7)
   
 
     
