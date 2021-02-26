@@ -340,6 +340,10 @@ You can set it to NULL.
 
   # Get the name of colors R
     scales::hue_pal()(7)
+    
+  # Command for knitting the Rmarkdown from command line
+    Rscript -e "rmarkdown::render('output_file.Rmd')"
+
   
 
     
