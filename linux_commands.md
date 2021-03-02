@@ -236,6 +236,15 @@ or
     htop # to get a colorful look at the resources usage by the system
  # Compiling Rmarkdown from the linux command line
     Rscript -e "rmarkdown::render('filename')"
+    
+ # Transferring files between to computers
+ 
+ # When making copy from remote server to local machine
+    scp remote_system_user_name@remote_system_ip_address:/path/to/file/file_on_server file_name_on_local_computer.txt
+
+# When making copy from local machine to remote server 
+    scp file_name_on_local_computer.txt remoteuser@remoteserver:/path_to_copy_the_file
+    
 
 
 
