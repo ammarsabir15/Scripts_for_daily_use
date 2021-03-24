@@ -340,6 +340,9 @@ You can set it to NULL.
 
   # Get the name of colors R
     scales::hue_pal()(7)
+  
+  # Get the name row name with column
+    df[,"row_name", drop=FALSE]
     
   # Command for knitting the Rmarkdown from command line
     Rscript -e "rmarkdown::render('output_file.Rmd')"
