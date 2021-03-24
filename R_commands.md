@@ -344,7 +344,8 @@ You can set it to NULL.
   # Command for knitting the Rmarkdown from command line
     Rscript -e "rmarkdown::render('output_file.Rmd')"
 
-  
+ # Command for merging dataframes based on identical rownames
+    merge(df1, df2, by = 0)
 
     
     
