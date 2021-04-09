@@ -349,6 +349,13 @@ You can set it to NULL.
 
  # Command for merging dataframes based on identical rownames
     merge(df1, df2, by = 0)
+    
+ # Command for making venn diagram 
+    library(gplots)
+    x <-c(rep(c(1,2,3),times=c(4,5,8)),12,15,20)
+    y <-c(1:10,25)
+    venn(list(x,y))
+ 
 
     
     
