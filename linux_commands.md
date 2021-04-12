@@ -237,7 +237,7 @@ or
  # Compiling Rmarkdown from the linux command line
     Rscript -e "rmarkdown::render('filename')"
     
- # Transferring files between to computers
+ # Transferring files between two computers
  
  # When making copy from remote server to local machine
     scp remote_system_user_name@remote_system_ip_address:/path/to/file/file_on_server file_name_on_local_computer.txt
@@ -245,6 +245,8 @@ or
 # When making copy from local machine to remote server 
     scp file_name_on_local_computer.txt remoteuser@remoteserver:/path_to_copy_the_file
     
+# Converting html to pdf 
+    wkhtmltopdf file_name.html file_name.pdf
 
 
 
