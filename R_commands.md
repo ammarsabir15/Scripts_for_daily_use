@@ -356,6 +356,9 @@ You can set it to NULL.
     y <-c(1:10,25)
     venn(list(x,y))
  
+ # Print column with rownames
+    data[,"c", drop=FALSE]
+   
 
     
     
