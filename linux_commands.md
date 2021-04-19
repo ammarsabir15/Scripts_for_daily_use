@@ -247,6 +247,9 @@ or
     
 # Converting html to pdf 
     wkhtmltopdf file_name.html file_name.pdf
+    
+# For compiling file with pdflatex    
+    pdflatex test7.tex
 
 
 
