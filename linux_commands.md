@@ -241,10 +241,13 @@ or
  
  # When making copy from remote server to local machine
     scp remote_system_user_name@remote_system_ip_address:/path/to/file/file_on_server file_name_on_local_computer.txt
+ 
+ # When copying multiple files using regex
+    scp "user@machine:/path/[regex here]" .
 
-# When making copy from local machine to remote server 
+ # When making copy from local machine to remote server 
     scp file_name_on_local_computer.txt remoteuser@remoteserver:/path_to_copy_the_file
-    
+ 
 # Converting html to pdf 
     wkhtmltopdf file_name.html file_name.pdf
     
