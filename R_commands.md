@@ -358,6 +358,22 @@ You can set it to NULL.
  
  # Print column with rownames
     data[,"c", drop=FALSE]
+    
+ # Make vectors for clusters belonging to genes
+    names <- c("gene1","gene2","gene1","gene2","gene1","gene2","gene4")
+    values <- c(0.1,0.3,0.5,0.6,0.3,0.4,0.9)
+    cluster <- c("C1","C1","C1","C2","C2","C3","C3")
+
+    data <- data.frame(names,values,cluster)
+
+    cluster_names <- as.vector(unique(data$cluster))
+
+
+    for(i in cluster_names)
+    {
+    assign(i ,as.vector(unlist(data[which(data$cluster == i  ),][1])))
+    } # This will make three vectors with names C1,C2 and C3. 
+    
    
 
     
