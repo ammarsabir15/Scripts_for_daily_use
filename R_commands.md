@@ -374,6 +374,9 @@ You can set it to NULL.
     assign(i ,as.vector(unlist(data[which(data$cluster == i  ),][1])))
     } # This will make three vectors with names C1,C2 and C3. 
     
+    Docker Token
+    https://medium.com/paperchain/fetching-private-github-repos-from-a-docker-container-273f25ec5a74
+    
    
 
     
