@@ -377,6 +377,10 @@ You can set it to NULL.
     Docker Token
     https://medium.com/paperchain/fetching-private-github-repos-from-a-docker-container-273f25ec5a74
     
+    
+    Get the coordinates of umap from seurat object
+    seurat_object[["umap"]]@cell.embeddings
+    
    
 
     
