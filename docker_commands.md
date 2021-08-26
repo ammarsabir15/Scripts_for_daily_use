@@ -34,3 +34,6 @@
 # For building a docker image
     docker build -t cheemaa/tradeseq .
     
+# To restart a docker container (previously shut down)
+    docker restart container_id
+    
