@@ -392,10 +392,10 @@ You can set it to NULL.
 
     pivot_longer(df, cols = -profile, names_to = "var", values_to = "val")
     profile Sepal.Length Sepal.Width Petal.Length Petal.Width
-  1 Profile 1       -1.011       0.850       -1.301      -1.251
-  2 Profile 2        0.542      -0.389        0.662       0.673
-  3 Profile 3       -0.376      -0.967        0.115       0.038
-  4 Profile 4        1.502       0.158        1.277       1.239
+    1 Profile 1       -1.011       0.850       -1.301      -1.251
+    2 Profile 2        0.542      -0.389        0.662       0.673
+    3 Profile 3       -0.376      -0.967        0.115       0.038
+    4 Profile 4        1.502       0.158        1.277       1.239
 
    
 
