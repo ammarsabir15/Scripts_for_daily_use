@@ -374,13 +374,29 @@ You can set it to NULL.
     assign(i ,as.vector(unlist(data[which(data$cluster == i  ),][1])))
     } # This will make three vectors with names C1,C2 and C3. 
     
-    Docker Token
+    
+    # Docker Token
     https://medium.com/paperchain/fetching-private-github-repos-from-a-docker-container-273f25ec5a74
     
     
-    Get the coordinates of umap from seurat object
+    # Get the coordinates of umap from seurat object
     seurat_object[["umap"]]@cell.embeddings
     
+    # convert all columns of a dataframe to a single column preserving column names
+    df <- structure(list(profile = structure(1:4, .Label = c("Profile 1", 
+    "Profile 2", "Profile 3", "Profile 4"), class = "factor"), Sepal.Length = c(-1.011, 
+    0.542, -0.376, 1.502), Sepal.Width = c(0.85, -0.389, -0.967, 
+    0.158), Petal.Length = c(-1.301, 0.662, 0.115, 1.277), Petal.Width = c(-1.251, 
+    0.673, 0.038, 1.239)), class = "data.frame", row.names = c(NA, -4L))
+    library(tidyr)
+
+    pivot_longer(df, cols = -profile, names_to = "var", values_to = "val")
+    profile Sepal.Length Sepal.Width Petal.Length Petal.Width
+  1 Profile 1       -1.011       0.850       -1.301      -1.251
+  2 Profile 2        0.542      -0.389        0.662       0.673
+  3 Profile 3       -0.376      -0.967        0.115       0.038
+  4 Profile 4        1.502       0.158        1.277       1.239
+
    
 
     
