@@ -247,7 +247,9 @@ or
 
  # When making copy from local machine to remote server 
     scp file_name_on_local_computer.txt remoteuser@remoteserver:/path_to_copy_the_file
- 
+    
+ # When copying whole folder from local computer to the remote computer   
+    scp -r /path/from-where/to_copy/files/ remoteuser@remoteserver:/destination/to_copy/the_file
 # Converting html to pdf 
     wkhtmltopdf file_name.html file_name.pdf
     
