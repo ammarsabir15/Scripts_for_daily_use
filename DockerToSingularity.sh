@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# shared by bionfo platform @ ciml (https://github.com/CIML-bioinformatic)
 # The name of the Docker image to run
 DOCKER_IMAGE=$1
 # The name of the Singularity image to create
