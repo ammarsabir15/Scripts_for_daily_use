@@ -19,3 +19,6 @@
 
 ### To show line numbers vim
      set numbers
+
+### close the vim editor without saving anything
+     q()
