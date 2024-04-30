@@ -1,3 +1,7 @@
+# Remove objects matching pattern
+rm(list=ls(pattern="^tp_"))
+
+
 # Join vectors containing duplicate values R
 
 
