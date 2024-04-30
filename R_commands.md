@@ -1,8 +1,9 @@
 # keep specific objects
-rm(list = setdiff(ls(), ls() %>% str_subset("xxx")))
+`library(stringr)
+rm(list = setdiff(ls(), ls() %>% str_subset("xxx")))`
 
 # Remove objects matching pattern
-rm(list=ls(pattern="^tp_"))
+`rm(list=ls(pattern="^tp_"))`
 
 
 # Join vectors containing duplicate values R
