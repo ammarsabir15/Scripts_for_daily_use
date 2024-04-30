@@ -1,3 +1,6 @@
+# keep specific objects
+rm(list = setdiff(ls(), ls() %>% str_subset("xxx")))
+
 # Remove objects matching pattern
 rm(list=ls(pattern="^tp_"))
 
