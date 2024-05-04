@@ -408,9 +408,19 @@ You can set it to NULL.
 
    
 
-    
-    
-    
+# tidyverse filter where & is replaced by ,
+    btv_sea_flights_fall <- flights %>% 
+    filter(origin == "JFK", (dest == "BTV" | dest == "SEA"), month >= 10)
+
+
+# tidyverse shortening long command for | operator    
+    many_airports <- flights %>% 
+    filter(dest == "SEA" | dest == "SFO" | dest == "PDX" | 
+         dest == "BTV" | dest == "BDL")    
+    # the code below will give the same resuls as the one below
+    many_airports <- flights %>% 
+    filter(dest %in% c("SEA", "SFO", "PDX", "BTV", "BDL"))
+
     
     
     
