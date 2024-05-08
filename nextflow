@@ -1,0 +1,5 @@
+### run script with nextflow
+nextflow run <script_name>
+
+### nextflow version
+nextflow --version
