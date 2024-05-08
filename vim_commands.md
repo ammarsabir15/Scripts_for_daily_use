@@ -18,7 +18,7 @@
      5G # for going to the fifth line
 
 ### To show line numbers vim
-     set numbers
+     set number
 
 ### close the vim editor without saving anything
      q()
