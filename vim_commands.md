@@ -22,3 +22,18 @@
 
 ### close the vim editor without saving anything
      q()
+
+### save the changes to the file and close the file
+     wq
+
+### undo something done by mistake
+     u  # small u
+
+### undo changes for one line
+     U # capital U
+
+### to delete lines 
+     dd # deletes a single line
+
+### delete specific number of lines
+    5dd # will delete 5 lines starting from the cursor
