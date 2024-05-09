@@ -256,5 +256,12 @@ or
 # For compiling file with pdflatex    
     pdflatex test7.tex
 
+# finding the file format in linux
+file <file_name>
+
+# read the compressed files without uncompressing them
+zcat <file_name>
+    
+
 
 
