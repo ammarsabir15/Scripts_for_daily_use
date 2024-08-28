@@ -19,11 +19,8 @@
 # To remove all stopped containers
     sudo docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rm
 
-
-
 # Saving an image in a tar.gz archive:
     docker save NameOfDockerImage > /mnt/NAS7/.../NameOfDockerImage.tar.gz
-
 
 # Loading a docker image
     docker load -i /mnt/NAS7/.../NameOfDockerImage.tar.gz
@@ -36,4 +33,18 @@
     
 # To restart a docker container (previously shut down)
     docker restart container_id
+
+# To view the container log
+    docker logs <container_id>
+
+# To stop a container
+    docker stop <container_id>
+
+# To kill a container
+    docker kill <container_id>
     
+# To run docker image in interactive mode
+    docker run -it <image_name> /bin/bash
+
+# To run docker container in interactive mode
+    docker exec -it my_container /bin/bash
