@@ -261,6 +261,16 @@ file <file_name>
 
 # read the compressed files without uncompressing them
 zcat <file_name>
+
+# make a new file using touch and write something using cat
+touch <file_name>
+cat > <filename>
+
+# print ls with exact size of the files (in GB or MB) 
+ls -lh
+
+# execute previous command from history
+!command_number
     
 
 
