@@ -6,6 +6,9 @@
     
 # To remove a docker image    
     docker rmi <image-name>
+
+# remove all containers associated with an image
+    docker ps -a -q --filter "ancestor=<image_id_or_name>" | xargs -r docker rm -f
     
 # To list the running docker containers
     docker ps
@@ -27,7 +30,8 @@
     
 # Remove all dangling docker images
     docker images -q --filter dangling=true | xargs docker rmi
-    
+    docker image prune -f
+
 # For building a docker image
     docker build -t cheemaa/tradeseq .
     
