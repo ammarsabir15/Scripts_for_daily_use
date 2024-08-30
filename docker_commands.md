@@ -17,7 +17,7 @@
     docker rm <container-name>
 
 # To remove all stopped containers
-    sudo docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rm
+    docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rm
 
 # Saving an image in a tar.gz archive:
     docker save NameOfDockerImage > /mnt/NAS7/.../NameOfDockerImage.tar.gz
@@ -46,5 +46,14 @@
 # To run docker image in interactive mode
     docker run -it <image_name> /bin/bash
 
-# To run docker container in interactive mode
-    docker exec -it my_container /bin/bash
+# find directory mount to docker image or inspect other aspects for the docker image
+    docker inspect <container_name>
+
+# To run docker an existing container in interactive mode
+    docker exec -it <container> /bin/bash
+
+# Lists all containers, including stopped ones
+    docker ps -a  
+
+# To start a stopped container
+    docker start <container>
