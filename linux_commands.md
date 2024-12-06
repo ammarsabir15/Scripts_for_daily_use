@@ -1,3 +1,7 @@
+# run Rmarkdown in background
+    nohup Rscript -e "Sys.setenv(RSTUDIO_PANDOC='/usr/lib/rstudio-server/bin/quarto/bin/tools/x86_64'); rmarkdown::render('neo_tnbc_analysis.Rmd', output_file='output.html')" > output.log 2>&1 &
+here I mentioned the path to pandoc, try running without providing the path to pandoc if it works that way
+
 # Printing a column from a file based on condition
     awk '{ if ($2 < 0.05) print $1 }' file_name # Where $1 and $2 are column names
     awk '{ if ($2 <= 80 && $3 >= 90)  print $1 }' file_name # for multiple conditions
